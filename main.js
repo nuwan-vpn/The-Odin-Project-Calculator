@@ -13,11 +13,14 @@ document.addEventListener("DOMContentLoaded", function(){
     let previousScreen = document.querySelector(".previous");
     let currentScreen = document.querySelector(".current");
 
-    numbers.forEach((number)=>addEventListener("click",function(e){
-        handleNumber(e.target.textContent)
-    }));
+    numbers.forEach((number) => {
+        number.addEventListener("click",function(e){
+            handleNumber(e.target.textContent)
+            currentScreen.textContent = currentValue;
+        });
+    });
 });
 
 function handleNumber(number){
-    console.log(number)
+    currentValue += number;
 }
