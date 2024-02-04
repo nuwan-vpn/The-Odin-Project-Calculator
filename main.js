@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function(){
     operators.forEach((op) => {
         op.addEventListener("click", function(e){
             handleOperators(e.target.textContent)
+            previousScreen.textContent = previousValue + " " + operator;
+            currentScreen.textContent = currentValue;
         });
     });
 });
@@ -36,5 +38,8 @@ function handleNumber(number){
 }
 
 function handleOperators(op){
-    console.log(op)
+    operator = op;
+    previousValue = currentValue;
+    currentValue = '';
+
 }
