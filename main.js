@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", function(){
             currentScreen.textContent = currentValue;
         });
     });
+
+    operators.forEach((op) => {
+        op.addEventListener("click", function(e){
+            handleOperators(e.target.textContent)
+        });
+    });
 });
 
 function handleNumber(number){
@@ -26,6 +32,9 @@ function handleNumber(number){
         currentValue += number;
     } else{
         alert("You are not allowed to enter more than 6 digits.");
-    }
-    
+    }   
+}
+
+function handleOperators(op){
+    console.log(op)
 }
