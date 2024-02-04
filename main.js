@@ -12,4 +12,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
     let previousScreen = document.querySelector(".previous");
     let currentScreen = document.querySelector(".current");
+
+    numbers.forEach((number)=>addEventListener("click",function(e){
+        handleNumber(e.target.textContent)
+    }));
 });
+
+function handleNumber(number){
+    console.log(number)
+}
