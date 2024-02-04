@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function(){
         currentScreen.textContent = currentValue;
     });
 
+    equal.addEventListener("click", function(){
+        calculate();
+    });
+
 });
 
 function handleNumber(number){
@@ -50,4 +54,21 @@ function handleOperators(op){
     operator = op;
     previousValue = currentValue;
     currentValue = '';
+}
+
+function calculate(){
+    previousValue = Number(previousValue);
+    currentValue = Number(currentValue);
+
+    if(operator === "+"){
+        previousValue += currentValue;
+    } else if (operator === "-"){
+        previousValue -= currentValue;
+    } else if (operator === "x"){
+        previousValue *= currentValue;
+    } else if (operator === "/"){
+        previousValue /= currentValue;
+    }
+
+    console.log(previousValue);
 }
