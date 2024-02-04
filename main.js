@@ -22,5 +22,10 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function handleNumber(number){
-    currentValue += number;
+    if(currentValue.length <=5){
+        currentValue += number;
+    } else{
+        alert("You are not allowed to enter more than 6 digits.");
+    }
+    
 }
