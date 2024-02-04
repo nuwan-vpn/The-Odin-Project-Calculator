@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     equal.addEventListener("click", function(){
         calculate();
+        previousScreen.textContent = '';
+        currentScreen.textContent = previousValue;
     });
 
 });
@@ -70,5 +72,6 @@ function calculate(){
         previousValue /= currentValue;
     }
 
-    console.log(previousValue);
+    previousValue = previousValue.toString();
+    currentValue = currentValue.toString();
 }
