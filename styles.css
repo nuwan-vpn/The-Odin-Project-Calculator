@@ -5,6 +5,8 @@ body{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    /* background-image: url(./img/cal.jpg); */
+    background-color: aqua;
 }
 
 .btn{
